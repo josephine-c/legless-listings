@@ -3,6 +3,7 @@ class ListingsController < ApplicationController
 
     def create
         #create a new listing
+        #byebug
     end
     
     def update
