@@ -21,11 +21,11 @@
         <%= form.label :deposit %>
         <%= form.number_field :deposit, min: 0 %>
     </div>
-     <div>
+    <div>
         <%= form.label :date_of_birth %>
         <%= form.date_field :date_of_birth %>
     </div>
-     <div>
+    <div>
         <%= form.label :diet %>
         <%= form.text_field :diet %>
     </div>
@@ -34,11 +34,15 @@
         <%= form.select(:breed_id, breeds.map{|b| [b.name,b.id]}) %>
     </div>
         <% sexes.each do |option| %>
-        <div>
+    <div>
             <%= form.radio_button :sex, option %>
             <%= form.label "sex_#{option}".to_sym, option %>
-        </div>
+    </div>
         <% end %>
+    <div>
+        <%= form.label :picture %>
+        <%= form.file_field :picture, accept: "image/png,image/gif,image/jpg,image/jpeg" %>
+    </div>
     <div>
         <%= form.submit %>
     </div>
